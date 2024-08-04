@@ -343,7 +343,7 @@ a:hover {
   position: relative;
 }
 
-#change-layout-btn {
+/* #change-layout-btn {
   margin-top: 20px;
   padding: 10px 20px;
   font-size: 1em;
@@ -355,7 +355,7 @@ a:hover {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.5s ease-in-out;
-}
+} */
 
 .projects-title.final-state {
   background-color: #fff;
@@ -371,9 +371,9 @@ a:hover {
   margin: 0;
 }
 
-.hidden {
+/* .hidden {
   display: none !important;
-}
+} */
 .swiper {
   margin-top: 5%;
   margin-left: 15% !important;

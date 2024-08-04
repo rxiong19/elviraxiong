@@ -117,40 +117,39 @@ function projects() {
     duration: 800,
     delay: (el, i) => 300 + 30 * i,
   });
-  // .add({
-  //   targets: "#change-layout-btn",
-  //   opacity: [0, 0.5, 1],
-  //   duration: 100,
-  //   easing: "easeOutQuad",
-  //   complete: () => {
-  //     button.style.pointerEvents = "auto";
-  //   },
-  // });
+  //     .add({
+  //       targets: "#change-layout-btn",
+  //       opacity: [0, 0.5, 1],
+  //       duration: 100,
+  //       easing: "easeOutQuad",
+  //       complete: () => {
+  //         button.style.pointerEvents = "auto";
+  //       },
+  //     });
 
   //   button.addEventListener("click", changeProjectSettings);
-  const projectsTitle = document.querySelector(".projects-title");
-  projectsTitle.classList.add("final-state");
-  const swiperSection = document.querySelector(".swiper");
-
-  swiperSection.classList.remove("hidden");
-
-  if (!swiperSection.swiper) {
-    const swiper = new Swiper(".mySwiper", {
-      loop: true,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  }
 }
-function changeProjectSettings() {
-  const projectsTitle = document.querySelector(".projects-title");
-  projectsTitle.classList.add("final-state");
+// function changeProjectSettings() {
+//   const projectsTitle = document.querySelector(".projects-title");
+//   projectsTitle.classList.add("final-state");
 
-  const button = document.getElementById("change-layout-btn");
-  button.style.display = "none";
-}
+//   const button = document.getElementById("change-layout-btn");
+//   button.style.display = "none";
+
+//   const swiperSection = document.querySelector(".swiper");
+
+//   swiperSection.classList.remove("hidden");
+
+//   if (!swiperSection.swiper) {
+//     const swiper = new Swiper(".mySwiper", {
+//       loop: true,
+//       navigation: {
+//         nextEl: ".swiper-button-next",
+//         prevEl: ".swiper-button-prev",
+//       },
+//     });
+//   }
+// }
 
 function contact() {
   anime
