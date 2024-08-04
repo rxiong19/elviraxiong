@@ -404,7 +404,7 @@ a:hover {
   align-items: center;
   justify-content: flex-start;
   padding: 40px;
-  background-color: #f9f9f9;
+  margin-bottom: 0% !important;
 }
 
 .contact-title {
