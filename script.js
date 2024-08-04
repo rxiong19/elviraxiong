@@ -14,7 +14,7 @@ function aboutMe() {
   );
 
   anime
-    .timeline({ loop: true })
+    .timeline({ loop: false })
     .add({
       targets: ".ml1 .letter",
       scale: [0.3, 1],

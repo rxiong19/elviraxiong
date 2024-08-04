@@ -17,3 +17,11 @@
     margin-bottom: 0% !important;
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .timeline-container {
+    flex-direction: column;
+    align-items: center;
+    display: inline-block;
+  }
+}
