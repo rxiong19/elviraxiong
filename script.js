@@ -158,7 +158,7 @@ function contact() {
     .timeline({ loop: false })
     .add({
       targets: ".ml8 .circle-white",
-      scale: [0, 3],
+      scale: [0, 1.5],
       opacity: [1, 0],
       easing: "easeInOutExpo",
       rotateZ: 360,
@@ -204,7 +204,7 @@ function contact() {
     rotateZ: 360,
     duration: 8000,
     easing: "linear",
-    loop: false,
+    loop: true,
   });
 }
 
