@@ -104,40 +104,32 @@ function projects() {
     /\S/g,
     "<span class='letter'>$&</span>"
   );
-  const button = document.getElementById("change-layout-btn");
-  button.style.opacity = 0;
-  button.style.pointerEvents = "none";
+  //   const button = document.getElementById("change-layout-btn");
+  //   button.style.opacity = 0;
+  //   button.style.pointerEvents = "none";
 
-  anime
-    .timeline({ loop: false })
-    .add({
-      targets: ".ml13 .letter",
-      translateY: [100, 0],
-      translateZ: 0,
-      opacity: [0, 1],
-      easing: "easeOutExpo",
-      duration: 800,
-      delay: (el, i) => 300 + 30 * i,
-    })
-    .add({
-      targets: "#change-layout-btn",
-      opacity: [0, 0.5, 1],
-      duration: 100,
-      easing: "easeOutQuad",
-      complete: () => {
-        button.style.pointerEvents = "auto";
-      },
-    });
+  anime.timeline({ loop: false }).add({
+    targets: ".ml13 .letter",
+    translateY: [100, 0],
+    translateZ: 0,
+    opacity: [0, 1],
+    easing: "easeOutExpo",
+    duration: 800,
+    delay: (el, i) => 300 + 30 * i,
+  });
+  // .add({
+  //   targets: "#change-layout-btn",
+  //   opacity: [0, 0.5, 1],
+  //   duration: 100,
+  //   easing: "easeOutQuad",
+  //   complete: () => {
+  //     button.style.pointerEvents = "auto";
+  //   },
+  // });
 
-  button.addEventListener("click", changeProjectSettings);
-}
-function changeProjectSettings() {
+  //   button.addEventListener("click", changeProjectSettings);
   const projectsTitle = document.querySelector(".projects-title");
   projectsTitle.classList.add("final-state");
-
-  const button = document.getElementById("change-layout-btn");
-  button.style.display = "none";
-
   const swiperSection = document.querySelector(".swiper");
 
   swiperSection.classList.remove("hidden");
@@ -151,6 +143,13 @@ function changeProjectSettings() {
       },
     });
   }
+}
+function changeProjectSettings() {
+  const projectsTitle = document.querySelector(".projects-title");
+  projectsTitle.classList.add("final-state");
+
+  const button = document.getElementById("change-layout-btn");
+  button.style.display = "none";
 }
 
 function contact() {
