@@ -15,14 +15,14 @@
     margin-bottom: 0% !important;
   }
 
-  .timeline-swiper-wrapper {
+  .swiper-wrapper {
     width: 100%;
   }
-  .timeline-swiper-slide {
+  .swiper-slide {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 4%;
+    border-radius: 3%;
     font-size: 22px;
     font-weight: bold;
     color: #fff;
