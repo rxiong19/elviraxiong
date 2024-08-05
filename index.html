@@ -33,8 +33,8 @@
         </div>
         <ul class="menu-links">
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </ul>
       </div>
@@ -43,8 +43,10 @@
       <div class="profile-section">
         <img src="./assets/profile_pic.jpg" alt="Elvira's Profile Picture" />
         <div class="profile-description">
-          <p>Hello!</p>
-          <p>My name is ... Elvira!</p>
+          <div class="profile-title">
+            <p>Hello!</p>
+            <p>My name is ... <span class="hover-name">Elvira</span>!</p>
+          </div>
           <div class="profile-links">
             <a href="https://www.linkedin.com/in/elvira-xiong-568262206/">
               <img src="./assets/linkedin.png" alt="LinkedIn" />
@@ -84,96 +86,13 @@
             During my study at UMass, I focused on software engineering and web
             development.
 
-            <br />I am an active person who loves to learn all kinds of
-            techniques from various experiences and is willing to take on any
-            challenge. I will do my best to conduct my own research, collaborate
-            with my teammates, and consult supervisors to solve challenges. I
-            believe a person who is willing to take on any challenge will
-            eventually overcome and learn from them.<br /><br />
+            <br /><br />
             I am willing to learn more from various experiences and give back to
             our community.
           </p>
         </div>
       </div>
     </section>
-
-    <section id="experience">
-      <p><br /><br /><br /></p>
-      <div class="experience-title">
-        <h1 class="ml11">
-          <span class="text-wrapper">
-            <span class="line line1"></span>
-            <span class="letters">Experience</span>
-          </span>
-        </h1>
-      </div>
-      <div class="experience-timeline">
-        <div class="timeline-stick"><span></span></div>
-        <div class="timeline-container left-container">
-          <div class="timeline-container-text">
-            <h2>AudioShelf</h2>
-            <small>Jan. 2023 - Mar. 2023</small>
-            <p>
-              I was a front-end intern at a student start-up called AudioShelf
-              that foucsed on building an audio book app with 30+ languages. my
-              responsibilities were
-              <strong>developing new features</strong>,
-              <strong>solving UI bugs</strong>,
-              <strong>testing app functionalities</strong>, and sometimes
-              <strong>checking translation mistakes</strong> since I spoke
-              mutiple languages.
-            </p>
-          </div>
-        </div>
-
-        <div class="timeline-container right-container">
-          <div class="timeline-container-text">
-            <h2>DSC-WAV (NSF)</h2>
-            <small>Aug. 2022 - Dec. 2022</small>
-            <p>
-              I was a Data Scientist in a NSF funded program called DSC-WAV.
-            </p>
-          </div>
-        </div>
-
-        <div class="timeline-container left-container">
-          <div class="timeline-container-text">
-            <h2>UMass Residential Life</h2>
-            <small>Aug. 2022 </small>
-            <p>
-              I was a team leader in charge of a group of ~15 minute movers.
-            </p>
-          </div>
-        </div>
-
-        <div class="timeline-container right-container">
-          <div class="timeline-container-text">
-            <h2>HackUMass</h2>
-            <small>May. 2022 - Dec. 2022</small>
-            <p>I participated in the Logistics Team.</p>
-          </div>
-        </div>
-
-        <div class="timeline-container left-container">
-          <div class="timeline-container-text">
-            <h2>UMass Exam Accommodation Services</h2>
-            <small>Aug. 2021 - Dec. 2022</small>
-            <p>I was an exam proctor at UMass Exam Accomodation Services.</p>
-          </div>
-        </div>
-        <div class="timeline-container right-container">
-          <div class="timeline-container-text">
-            <h2>UMass Residential Life</h2>
-            <small>Aug. 2021 </small>
-            <p>
-              I volunteered to be a minute mover helping new students to move
-              in.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section id="projects">
       <p><br /><br /><br /></p>
       <div class="projects-title final-state">
@@ -254,6 +173,83 @@
           <br />
         </p>
         <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <p><br /><br /><br /></p>
+      <div class="experience-title">
+        <h1 class="ml11">
+          <span class="text-wrapper">
+            <span class="line line1"></span>
+            <span class="letters">Experience</span>
+          </span>
+        </h1>
+      </div>
+      <div class="experience-timeline">
+        <div class="timeline-stick"><span></span></div>
+        <div class="timeline-container left-container">
+          <div class="timeline-container-text">
+            <h2>AudioShelf</h2>
+            <small>Jan. 2023 - Mar. 2023</small>
+            <p>
+              I was a front-end intern at a student start-up called AudioShelf
+              that foucsed on building an audio book app with 30+ languages. my
+              responsibilities were
+              <strong>developing new features</strong>,
+              <strong>solving UI bugs</strong>,
+              <strong>testing app functionalities</strong>, and sometimes
+              <strong>checking translation mistakes</strong> since I spoke
+              mutiple languages.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-container right-container">
+          <div class="timeline-container-text">
+            <h2>DSC-WAV (NSF)</h2>
+            <small>Aug. 2022 - Dec. 2022</small>
+            <p>
+              I was a Data Scientist in a NSF funded program called DSC-WAV.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-container left-container">
+          <div class="timeline-container-text">
+            <h2>UMass Residential Life</h2>
+            <small>Aug. 2022 </small>
+            <p>
+              I was a team leader in charge of a group of ~15 minute movers.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-container right-container">
+          <div class="timeline-container-text">
+            <h2>HackUMass</h2>
+            <small>May. 2022 - Dec. 2022</small>
+            <p>I participated in the Logistics Team.</p>
+          </div>
+        </div>
+
+        <div class="timeline-container left-container">
+          <div class="timeline-container-text">
+            <h2>UMass Exam Accommodation Services</h2>
+            <small>Aug. 2021 - Dec. 2022</small>
+            <p>I was an exam proctor at UMass Exam Accomodation Services.</p>
+          </div>
+        </div>
+        <div class="timeline-container right-container">
+          <div class="timeline-container-text">
+            <h2>UMass Residential Life</h2>
+            <small>Aug. 2021 </small>
+            <p>
+              I volunteered to be a minute mover helping new students to move
+              in.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 

@@ -154,11 +154,13 @@ a:hover {
 
 /* Profile */
 .profile-section {
-  margin-top: 3%;
   margin-bottom: 5%;
   margin-left: 15%;
   display: flex;
   align-items: center;
+}
+.profile-title p {
+  font-size: 3vw;
 }
 
 .profile-section img {
@@ -172,10 +174,47 @@ a:hover {
   margin-left: 5%;
   font-size: 2.5vw;
   width: 100%;
-  margin-top: 15%;
 }
+.profile-title {
+  position: relative;
+}
+
+.hover-name {
+  position: relative;
+  cursor: pointer;
+  color: #3498db;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.hover-name:hover {
+  color: #e74c3c;
+  transform: scale(1.1);
+}
+
+.hover-name::after {
+  content: "/ɛlˈviːrə/";
+  position: absolute;
+  top: -80%;
+  left: -25%;
+  transform: translateY(-50%); /* Center horizontally */
+  background: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 10;
+}
+
+.hover-name:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
 .profile-links {
   margin-top: 5%;
+  align-items: center;
 }
 
 .profile-links a {
@@ -187,7 +226,7 @@ a:hover {
 }
 
 .profile-links img {
-  width: 5%;
+  width: 6%;
   height: auto;
   cursor: pointer;
 }
