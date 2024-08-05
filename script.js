@@ -88,7 +88,8 @@ function experience() {
     });
 
   const timelineStick = document.querySelector(".timeline-stick");
-  timelineStick.style.height = "0%";
+
+  //   timelineStick.style.height = "0%";
   anime({
     targets: timelineStick,
     height: "100%",
@@ -258,3 +259,51 @@ var swiper = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+function initializeSwiper() {
+  let experienceTimeline = document.querySelector(".experience-timeline");
+  console.log(window.innerWidth);
+  if (window.innerWidth < 1000) {
+    if (!experienceTimeline.classList.contains("swiper")) {
+      experienceTimeline.classList.add("swiper", "timeline-swiper-container");
+
+      document.querySelectorAll(".timeline-container").forEach((container) => {
+        container.classList.add("swiper-slide");
+      });
+
+      var swiperWrapper = document.createElement("div");
+      swiperWrapper.className = "swiper-wrapper";
+
+      while (experienceTimeline.firstChild) {
+        swiperWrapper.appendChild(experienceTimeline.firstChild);
+      }
+
+      experienceTimeline.appendChild(swiperWrapper);
+
+      console.log("append");
+      new Swiper(".timeline-swiper-container", {
+        effect: "cards",
+        grabCursor: true,
+        slidesPerView: 1,
+        spaceBetween: 10,
+      });
+    }
+  } else {
+    if (experienceTimeline.classList.contains("swiper")) {
+      experienceTimeline.swiper.destroy(true, true);
+    }
+    if (experienceTimeline.classList.contains("swiper")) {
+      experienceTimeline.classList.remove("swiper");
+      experienceTimeline.classList.remove(".timeline-swiper-container");
+
+      document.querySelector(".swiper-wrapper").remove();
+      document.querySelectorAll(".timeline-container").forEach((container) => {
+        container.classList.remove("swiper-slide");
+      });
+    }
+  }
+}
+
+// Run on load and resize
+window.addEventListener("load", initializeSwiper);
+window.addEventListener("resize", initializeSwiper);
