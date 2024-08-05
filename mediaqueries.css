@@ -5,9 +5,7 @@
   #hamburger-nav {
     display: flex;
   }
-}
 
-@media screen and (max-width: 1000px) {
   #contact {
     display: flex;
     flex-direction: column;
@@ -16,15 +14,6 @@
     padding: 20%;
     margin-bottom: 0% !important;
   }
-}
-
-@media screen and (max-width: 1000px) {
-  /* .experience-timeline {
-    flex-direction: column;
-    align-items: center;
-    display: flex;
-    overflow: hidden;
-  } */
 
   .timeline-swiper-wrapper {
     width: 100%;
@@ -65,9 +54,22 @@
   .right-container {
     left: 0%;
   }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
 }
 
 @media screen and (min-width: 1200px) {
+  .experience-timeline {
+    position: relative;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 15%;
+    margin-top: 5%;
+    --stick-height: 0%;
+  }
   .timeline-stick {
     position: absolute;
     width: 0.4vw;
@@ -77,13 +79,5 @@
     left: 50%;
     transform: translateX(-50%);
     height: var(--stick-height);
-    display: block;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .swiper-button-next,
-  .swiper-button-prev {
-    display: none !important;
   }
 }

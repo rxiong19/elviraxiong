@@ -88,8 +88,7 @@ function experience() {
     });
 
   const timelineStick = document.querySelector(".timeline-stick");
-
-  //   timelineStick.style.height = "0%";
+  timelineStick.style.height = "0%";
   anime({
     targets: timelineStick,
     height: "100%",
@@ -246,23 +245,10 @@ sections.forEach((section) => {
   observer.observe(section);
 });
 
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 1,
-  spaceBetween: 30,
-  loop: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
-
-function initializeSwiper() {
+function initializeExperienceSwiper() {
   let experienceTimeline = document.querySelector(".experience-timeline");
-  console.log(window.innerWidth);
+  let swiperInstance;
+
   if (window.innerWidth < 1000) {
     if (!experienceTimeline.classList.contains("swiper")) {
       experienceTimeline.classList.add("swiper", "timeline-swiper-container");
@@ -280,8 +266,7 @@ function initializeSwiper() {
 
       experienceTimeline.appendChild(swiperWrapper);
 
-      console.log("append");
-      new Swiper(".timeline-swiper-container", {
+      swiperInstance = new Swiper(".timeline-swiper-container", {
         effect: "cards",
         grabCursor: true,
         slidesPerView: 1,
@@ -290,20 +275,53 @@ function initializeSwiper() {
     }
   } else {
     if (experienceTimeline.classList.contains("swiper")) {
-      experienceTimeline.swiper.destroy(true, true);
-    }
-    if (experienceTimeline.classList.contains("swiper")) {
-      experienceTimeline.classList.remove("swiper");
-      experienceTimeline.classList.remove(".timeline-swiper-container");
+      if (swiperInstance) {
+        swiperInstance.destroy(true, true);
+        swiperInstance = null;
+      }
 
-      document.querySelector(".swiper-wrapper").remove();
+      experienceTimeline.classList.remove(
+        "swiper",
+        "timeline-swiper-container"
+      );
+
       document.querySelectorAll(".timeline-container").forEach((container) => {
         container.classList.remove("swiper-slide");
+      });
+
+      let swiperWrapper = document.querySelector(".swiper-wrapper");
+
+      while (swiperWrapper.firstChild) {
+        experienceTimeline.appendChild(swiperWrapper.firstChild);
+      }
+      swiperWrapper.remove();
+      document.querySelectorAll(".timeline-container").forEach((container) => {
+        container.style = "";
+      });
+      const shadows = document.querySelectorAll(
+        ".swiper-slide-shadow, .swiper-slide-shadow-cards"
+      );
+
+      shadows.forEach((shadow) => {
+        shadow.remove();
       });
     }
   }
 }
-
 // Run on load and resize
-window.addEventListener("load", initializeSwiper);
-window.addEventListener("resize", initializeSwiper);
+window.addEventListener("load", initializeExperienceSwiper);
+window.addEventListener("resize", initializeExperienceSwiper);
+
+let Projectswiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
